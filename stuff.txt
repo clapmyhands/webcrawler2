@@ -1,0 +1,2 @@
+stuff to consider:
+indonesian use . instead of , for thousands and . instead of , for decimals. marker e.g. 1.000.000,00
