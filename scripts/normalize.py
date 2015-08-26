@@ -1,5 +1,7 @@
 #!/home/khassan/projects/webcrawler2/wc_virt_env/bin/python
 # -*- coding:utf-8 -*-
+"""
+"""
 import re, os, json, pdb
 from num2words import num2words
 
@@ -19,7 +21,7 @@ def cleanText(text, acronymFile):
 		text	= ' '.join(tokenList)
 	#Convert text into lowercase
 	text	= text.lower()
-	#protect not identified (not in our list) abbrs and acronynms, by replacing periods with underscore, A.B.C.D.E.F.=>A_B_C_D_E_F_	
+	#protect not identified (not in our list) abbrs and acronynms, by replacing periods with underscore, A.B.C.D.E.F.=>A_B_C_D_E_F_
 	text	= re.sub('([a-z])\.([a-z])','\g<1>_\g<2>',text)
 	text	= re.sub('_([a-z])\.','_\g<1>_',text)
 	text	= re.sub('_([a-z])\.','_\g<1>_',text)
@@ -31,7 +33,7 @@ def cleanText(text, acronymFile):
 	#text	= re.sub('( +)\.(\d)',' 0 point \g<2>',text)
 	#Join thousands, eg: 1,000,000=>1000000
 	text	= re.sub('(\d),(\d)','\g<1>\g<2>',text)
-	#Put space between decimal and non decimal, eg: 50%=>5 %, 4am=>4 am, 100$=>100 $, #5=># 5 $
+	#Put space between decimal and non decimal, eg: 50% => 50 %, 4am => 4 am, 100$ => 100 $, #5 => # 5
 	text	= re.sub('(\d)(\D)','\g<1> \g<2>',text)
 	text	= re.sub('(\D)(\d)','\g<1> \g<2>',text)
 	text	= re.sub(' +',' ',text)		#remove multiple spaces
@@ -60,6 +62,6 @@ def cleanText(text, acronymFile):
 	for word in text.split():
 		if str(word.encode('utf-8')).isdigit():
 			text = text.replace(word, num2words(float(word)),1)
-	#Replace the rest symbols with the period, in order to split sentences by period later.	
+	#Replace the rest symbols with the period, in order to split sentences by period later.
 	text	= re.sub('(!+|\?+|;+|:+)','.', text)
 	return text
