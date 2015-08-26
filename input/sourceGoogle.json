@@ -1,0 +1,4 @@
+[
+{"Pattern":"url keyword num lang ftype as_ft xpath","url":"https://www.google.com/",
+"keyword":"", "num":"&num=", "lang":"&lr_lang=", "ftype":"&as_filetype=" , "as_ft":"&as_ft=" ,"xpath":"//h3[@class='r']/a",
+"url_def":"https://www.google.com/search?q=", "keyword_def":"test", "num_def":"10", "lang_def":"en", "ftype_def":"pdf", "as_ft_def":"e"}]

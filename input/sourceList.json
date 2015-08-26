@@ -1,0 +1,16 @@
+[
+{"Pattern":"url keyword num lang xpath","url":"https://www.google.com/",
+"keyword":"", "num":"&num=", "lang":"&lr_lang=", "xpath":"//h3[@class='r']/a",
+"url_def":"https://www.google.com/search?q=", "keyword_def":"test", "num_def":"10", "lang_def":"en"},
+{"Pattern":"url keyword section sortby xpath",
+"url":"http://www.sciencedaily.com/", "keyword":"", "section":"&section=", "sortby":"&sort=", "xpath":"//div[@class='search_headlines']/a",
+"url_def":"http://www.sciencedaily.com/search/?similar=&keyword=", "keyword_def":"test", "section_def":"all", "sortby_def":"relevance"},
+{"Pattern":"url keyword xpath",
+"url":"http://www.popsci.com/", "keyword":"", "xpath":"//ol//h3/a",
+"url_def":"http://www.popsci.com/find/", "keyword_def":"test"},
+{"Pattern":"url keyword xpath",
+"url":"http://www.technologyreview.com/", "keyword":"", "xpath":"//div[@class='story ']//h4/a",
+"url_def":"http://www.technologyreview.com/search/site/", "keyowrd_def":"test" },
+{"Pattern":"url keyword display sortby xpath",
+"url":"http://www.scientificamerican.com/", "keyword":"", "display":"&display=", "sortby":"&sortby=", "xpath":"//ul[@class='directoryList']//h3/a",
+"url_def":"http://www.scientificamerican.com/search/?q=", "keyowrd_def":"test", "display_def":"search", "sortby_def":"relevance" }]
