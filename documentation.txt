@@ -1,0 +1,11 @@
+documentation
+
+
+parser.add_argument("-i","--inputFile", help="input file containg keywords (one keyword per line)", required=True)
+parser.add_argument("-f","--sourceFile", help="input file containg source list (json file)", required=True)
+parser.add_argument("-o","--outputDir", help="output folder for saving search results", required=True)
+parser.add_argument("-a","--abbrFile", help="input file containg abbreviation/acronym list (json file)", required=False)
+parser.add_argument("-r","--result", help="number of results to generate in search, defalut value '10'", default='10')
+parser.add_argument("-s","--sortby", help="sort the links by 'date', default value 'relevance'", choices=['date','relevance'], default='')
+parser.add_argument("-l","--lang", help="set text language, default value 'english'", choices=['en','fr','es'], default='en')
+parser.add_argument("-n","--norm", help="activate normalization", action="store_true", default=False)
