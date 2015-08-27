@@ -1,0 +1,10 @@
+[{
+  "Pattern"     : "url page xpath",
+  "url"         : "http://www.tribunnews.com/",
+  "keyword"     : "",
+  "num"         : "",
+  "page"        : "",
+  "xpath"       : "//div[contains(@class,'f16') and contains(@class,'fbo']/a",
+  "url_def"     : "http://www.tribunnews.com/index-news",
+  "keyword_def" : "",
+}]
