@@ -46,15 +46,15 @@ def checkDuplicate(fileName, keyword, URL):
 		xPath	= ".//doc[@keyword=\'"+keyword+"\'"+"]"
 		for elementNode in root.findall(xPath):
 			if elementNode.attrib['URL'] == URL:
-				print "Dupilcate detected"
+				print "Duplicate detected"
 				return True
-		return False 
+		return False
 	except:
 		return False
 
 '''
 Reparse the XML document to make it more readable.
-'''   
+'''
 def prettifyXML(fileName):
 	try:
 		parserFormat	= etree.XMLParser(remove_blank_text=True)
